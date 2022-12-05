@@ -11,11 +11,10 @@ import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 
 const Registration = () => {
-  const navigation = useNavigation();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [firstName, setFirstName] = useState();
-  const [lastName, setLastName] = useState();
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
 
   registrationUser = async (email, password, lastName, firstName) => {
     await firebase

@@ -1,12 +1,9 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text,SafeAreaView,TouchableOpacity } from 'react-native'
+import React,{useState,useEffect} from 'react';
+import {firebase} from '../config';
 
 const Dashboard = () => {
-  return (
-    <View>
-      <Text>Dashboard</Text>
-    </View>
-  )
+  const [name,setName] =useState('')
 }
 
 export default Dashboard

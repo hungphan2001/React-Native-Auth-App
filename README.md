@@ -1,7 +1,5 @@
-# React-Native-Auth-App
-1.Login with firebase
-2.Signup with firebase
-3.Veritifiation email 
-4.Forgot password(soon)
-
-
+### React-Native-Auth-App with Login/SignUp
+- Login with firebase
+- Signup with firebase
+- Veritifiation email 
+- Forgot password

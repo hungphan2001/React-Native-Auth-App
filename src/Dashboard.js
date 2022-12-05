@@ -5,7 +5,17 @@ import {firebase} from '../config';
 const Dashboard = () => {
   const [name,setName] =useState('')
 
-  useEffect(() =>{
+// Change the password
+const changePassword = () =>{
+  firebase.auth().sendPasswordResetEmail(firebase.auth().currentUser.email)
+  .then(()=>{
+    alert("Password reset email sent")
+  }).catch((error)=>{
+    alert(error)
+  })
+}
+
+  useEffect(() => {
     firebase.firestore().collection('users')
     .doc(firebase.auth().currentUser.uid).get()
     .then((snapshot)=>{
@@ -21,10 +31,20 @@ const Dashboard = () => {
   return(
     <SafeAreaView style={styles.container}>
       <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Hello,{name.firstName}
+        Hello, {name.firstName}
       </Text>
       <TouchableOpacity
-        onPress={() =>{firebase.auth().signOut()}}
+        onPress={() =>{
+          changePassword()
+        }}
+        style={styles.button}>
+        <Text
+        style={{fontSize:22,fontWeight:'bold'}}>SignOut</Text>
+      </TouchableOpacity>
+      
+      <TouchableOpacity
+        onPress={() =>{firebase.auth().signOut();
+        }}
         style={styles.button}>
         <Text
         style={{fontSize:22,fontWeight:'bold'}}>SignOut</Text>

@@ -19,9 +19,9 @@ import { firebase } from '../config';
 import { CardStyleInterpolators } from '@react-navigation/stack';
 
 const Login = () => {
-  const navigation = useNavigation();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const navigation = useNavigation()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   loginUser = async (email, password) => {
     try {

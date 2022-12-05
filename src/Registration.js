@@ -25,7 +25,7 @@ const Registration = () => {
           .auth()
           .currentUser.sendEmailVerification({
             handleCodeInApp: true,
-            url: 'test-auth-edcfd.firebaseapp.com',
+            url: 'https://test-auth-edcfd.firebaseapp.com',
           })
           .then(() => {
             alert('Veritifiation email sent');
